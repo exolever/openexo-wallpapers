@@ -1,0 +1,12 @@
+Source: wallpaper_exo
+Section: utils
+Priority: extra
+Maintainer: Matilde Cabrera González <mati331@hotmail.es>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 0.0.1
+Homepage: https://github.com/mati3/wallpaperExO
+
+Package: wallpaper_exo
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Wallpaper of logo OpenExO
