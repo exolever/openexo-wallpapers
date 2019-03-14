@@ -1,5 +1,3 @@
-data/wallpaper_properties.sh /usr/bin
-data/logo.png /usr/share/pixmaps
-data/*.jpg /usr/share/backgrounds
-data/wallpaperexo.desktop /usr/share/applications
+data/usr/share/backgrounds/gnome-background-properties/openexo-wallpapers.xml /usr/share/backgrounds/gnome-background-properties
+data/usr/share/backgrounds/*.jpg /usr/share/backgrounds
 debian/changelog /usr/share/wallpaper_exo

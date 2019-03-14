@@ -1,9 +1,7 @@
-#!/bin/bash
-
-# delete the last line of file, remember after closed with </wallpaper>
-tail -n 1 "/usr/share/gnome-background-properties/bionic-wallpapers.xml" | wc -c | xargs -I {} truncate "/usr/share/gnome-background-properties/bionic-wallpapers.xml" -s -{}
-
-echo "  <wallpaper>
+<?xml version="1.0"?>
+<!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
+<wallpapers>
+ <wallpaper>
      <name>OpenExO 1</name>
      <filename>/usr/share/backgrounds/wallpaper-exo-1.jpg</filename>
      <options>zoom</options>
@@ -27,6 +25,4 @@ echo "  <wallpaper>
      <scolor>#000000</scolor>
      <shade_type>solid</shade_type>
  </wallpaper>
-</wallpaper>" >> /usr/share/gnome-background-properties/bionic-wallpapers.xml
-
-echo 'gsettings set org.gnome.desktop.background picture-uri "file:///usr/share/backgrounds/wallpaper-exo-1.jpg"'
+</wallpapers>

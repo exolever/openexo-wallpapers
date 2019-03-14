@@ -1,9 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Name=Wallpaper-exo2
-Comment=Change wallpaper to image exo.
-Exec=/usr/bin/wallpaper_properties.sh
-Terminal=false
-Type=Application
-Categories=Utility;
-Icon=/usr/share/pixmaps/logo.png
