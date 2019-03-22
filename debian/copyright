@@ -1,13 +1,13 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: wallpaperexo
-Source: https://github.com/mati3/wallpaperExO
+Source: https://github.com/exolever/openexo-wallpapers
 
 Files: *
-Copyright: 2019 Matilde Cabrera <mati331@hotmail.es>
+Copyright: 2019 Matilde Cabrera <matilde.cabrera@openexo.com> 
 License: MIT
 
 Files: debian/*
-Copyright: 2019 Matilde Cabrera <mati331@hotmail.es>
+Copyright: 2019 Matilde Cabrera <matilde.cabrera@openexo.com> 
 License: MIT
 
 License: MIT
