@@ -1,5 +1,11 @@
+wallpaperexo (0.0.5) bionic; urgency=low
+
+  * New distributions.
+
+ -- Matilde Cabrera <matilde.cabrera@openexo.com>  Mon, 25 Mar 2019 09:15:06 +0100
+
 wallpaperexo (0.0.4) bionic; urgency=low
 
   * First version
 
- -- Matilde Cabrera <matilde.cabrera@openexo.com>  Fri, 21 Mar 2019 09:56:25 +0100
+ -- Matilde Cabrera <matilde.cabrera@openexo.com>  Fri, 22 Mar 2019 09:56:25 +0100
