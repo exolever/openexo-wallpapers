@@ -1,3 +1,9 @@
+wallpaperexo (0.0.6) bionic; urgency=low
+
+  * New distributions test.
+
+ -- Matilde Cabrera <matilde.cabrera@openexo.com>  Mon, 25 Mar 2019 09:15:06 +0100
+ 
 wallpaperexo (0.0.5) bionic; urgency=low
 
   * New distributions.
