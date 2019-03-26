@@ -6,7 +6,7 @@ This PPA allows you to add several wallpapers with the OpenExo logo
 
         sudo add-apt-repository ppa:openexo/openexo-wallpapers
         sudo apt-get update
-        sudo apt install wallpaper-openexo
+        sudo apt install openexo-wallpaper
 
 
 [Link to launchpad hosting ](https://launchpad.net/~openexo/+archive/ubuntu/openexo-wallpapers)
