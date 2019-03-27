@@ -1,3 +1,9 @@
+wallpaperexo (0.0.9) trusty; urgency=low
+ 
+  * Add a new imagen
+ 
+ -- Matilde Cabrera <matilde.cabrera@openexo.com>  mié, 27 mar 2019  11:16:57 +0100
+ 
 wallpaperexo (0.0.8) bionic; urgency=low
 
   * New distributions test.
@@ -27,3 +33,4 @@ wallpaperexo (0.0.4) bionic; urgency=low
   * First version
 
  -- Matilde Cabrera <matilde.cabrera@openexo.com>  Fri, 22 Mar 2019 09:56:25 +0100
+

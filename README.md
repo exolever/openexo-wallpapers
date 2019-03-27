@@ -13,21 +13,10 @@ This PPA allows you to add several wallpapers with the OpenExo logo
 
 **To insert a new imagen:**
 
-1- To save the imagen in /usr/share/backgrounds/
+1- Add the new image in folder "images".
 
-2- To change the file /usr/share/gnome-background-properties/openexo-wallpapers.xml, you must add (you review the closing of labels):
+2- Execute the file generate.sh:
 
-         <wallpaper>
-             <name>OpenExO (next number)</name>
-             <filename>/usr/share/backgrounds/(name imagen).jpg</filename>
-             <options>zoom</options>
-             <pcolor>#000000</pcolor>
-             <scolor>#000000</scolor>
-             <shade_type>solid</shade_type>
-         </wallpaper>
+        ./generate.sh
 
-3- To changed the file debian/wallpaper-openexo.install and to add the new imagen:
-
-        usr/share/backgrounds/example-imagen.jpg 
-
-4- Add a new version in debian/changelog and a comment with the changes.
+3- Save changes in this repository.
