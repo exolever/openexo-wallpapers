@@ -1,4 +1,3 @@
-images/wallpaper-exo-1.jpg usr/share/backgrounds
-images/wallpaper-exo-2.jpg usr/share/backgrounds
-images/wallpaper-exo-3.jpg usr/share/backgrounds
+images/*.jpg usr/share/backgrounds
+images/*.png usr/share/backgrounds
 openexo-wallpapers.xml usr/share/gnome-background-properties
