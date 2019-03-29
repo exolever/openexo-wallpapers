@@ -34,4 +34,4 @@ sed -i "1i   \ -- Matilde Cabrera <matilde.cabrera@openexo.com>  $(date +'%a, %d
 sed -i "1i \ " debian/changelog
 sed -i "1i   \  * Add a new imagen."  debian/changelog
 sed -i "1i \ " debian/changelog
-sed -i "1i wallpaperexo ($NEW_VERSION) trusty; urgency=low"  debian/changelog
+sed -i "1i wallpaperexo ($NEW_VERSION) bionic; urgency=low"  debian/changelog
