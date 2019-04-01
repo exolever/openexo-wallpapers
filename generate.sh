@@ -26,7 +26,7 @@ TAG=$(echo "${OLD_VERSION/[^.$\b]/}")
 TAG=$(echo "${TAG/[^.$\b]/}")
 TAG=$(echo "${TAG/[^$\b]/}")
 TAG=$(echo "${TAG/[^$\b]/}")
-TAG2=$(echo "${OLD_VERSION/[$TAG\b]/}")
+TAG2="${OLD_VERSION:0:4}" # this catch the four first digit.
 NEW_VERSION=$TAG2"$((TAG + 1))"
 
 sed -i "1i \ " debian/changelog
