@@ -18,7 +18,7 @@ echo "<wallpapers>" >> openexo-wallpapers.xml
     echo " </wallpaper>" >> openexo-wallpapers.xml
   done
 
-echo '</wallpaper>' >> openexo-wallpapers.xml
+echo '</wallpapers>' >> openexo-wallpapers.xml
 
 OLD_VERSION=$(head -1 debian/changelog | sed -e 's/.*(\(.*\)).*/\1/')
 
