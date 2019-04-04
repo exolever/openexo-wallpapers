@@ -1,5 +1,9 @@
 deploy:
-  provider: script
-  script: generate.sh
-  on:
-    branch: master
+  - provider: script
+    script: bash generate.sh staging
+    on:
+      branch: develop
+  - provider: script
+    script: bash generate.sh production
+    on:
+      branch: master
