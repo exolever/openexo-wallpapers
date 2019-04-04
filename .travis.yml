@@ -1,8 +1,7 @@
-before_install:
-- gem install rake
+sudo: false
 deploy:
   - provider: script
     script: bash generate.sh 
     on:
-      branch: develop
+      branch: deploy
 
