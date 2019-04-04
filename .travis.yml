@@ -1,8 +1,6 @@
 lenguage: bash
 
-deploy:
-  - provider: script
-    script: bash generate.sh 
-    on:
-      branch: deploy
+script: bash generate.sh 
+  on:
+    branch: master
 
