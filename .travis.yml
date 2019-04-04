@@ -1,5 +1,5 @@
-sudo: false
-before_script:
-- chmod +x generate.sh
-script:
-  - ./generate.sh
+deploy:
+  provider: script
+  script: generate.sh
+  on:
+    branch: master
