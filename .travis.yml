@@ -3,3 +3,4 @@ deploy:
     script: bash generate.sh 
     on:
       all_branches: true
+
