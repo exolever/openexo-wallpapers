@@ -1,3 +1,9 @@
+wallpaperexo (0.0.17) bionic; urgency=low
+ 
+  * Add a new imagen.
+ 
+ -- Matilde Cabrera <matilde.cabrera@openexo.com>  mar, 02 abr 2019  11:00:51 +0100
+ 
 wallpaperexo (0.0.16) bionic; urgency=low
  
   * Testing.
