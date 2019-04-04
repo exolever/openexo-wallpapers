@@ -2,5 +2,5 @@ deploy:
   - provider: script
     script: bash generate.sh 
     on:
-      all_branches: true
+      branch: develop
 
