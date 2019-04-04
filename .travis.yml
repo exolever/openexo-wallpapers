@@ -1,6 +1,3 @@
 lenguage: bash
 
 script: bash generate.sh 
-  on:
-    branch: master
-
