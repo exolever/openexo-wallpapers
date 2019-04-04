@@ -1,4 +1,4 @@
-# wallpaperExO
+# wallpaperExO  [![Build Status](https://travis-ci.org/exolever/openexo-wallpapers.svg?branch=master)](https://travis-ci.org/exolever/openexo-wallpapers)
 
 This PPA allows you to add several wallpapers with the OpenExo logo
 
