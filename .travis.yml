@@ -10,13 +10,15 @@ env:
 
 before_install:
 - export BUILD_VERSION=$(date "+%Y%m%d").$TRAVIS_BUILD_NUMBER
+- if [ ! -z "$TRAVIS_TAG" ]; then export BUILD_VERSION=$TRAVIS_TAG; fi
 - export PACKAGE_NAME_VERSION=$PACKAGE_NAME.$BUILD_VERSION.deb
 
 script:
 - ls -l .
 - if [ ! -z "$TRAVIS_TAG" ]; then sed -i "s/0.0.0/$TRAVIS_TAG/" DEBIAN/control; fi
 - bash generate.sh
-- rm -rf generate.sh .travis.yml .git
+# Quick and dirty cleanup
+- rm -rf generate.sh .travis.yml README.md .git
 - dpkg-deb --build .
 - mv ..deb $PACKAGE_NAME_VERSION
 
@@ -32,8 +34,6 @@ after_success:
 # #   if [[ $DEPLOY_FAILURE == 'true' ]]; then echo "Uploading package(s) failed!"; travis_terminate 1; fi;
 
 
-
-
 # deploy:
 #   provider: launchpad
 #   slug: "openexo"
@@ -42,10 +42,10 @@ after_success:
 #   on:
 #     tags: true
 
-# deploy:
-#   provider: releases
-#   api_key: "GITHUB OAUTH TOKEN"
-#   file: "*.deb"
-#   skip_cleanup: true
-#   on:
-#     tags: true
+deploy:
+  provider: releases
+  api_key: "$GITHUB_TOKEN"
+  file: "$PACKAGE_NAME_VERSION"
+  skip_cleanup: true
+  on:
+    tags: true
