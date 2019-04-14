@@ -1,6 +1,6 @@
 #!/bin/bash
 
- rm openexo-wallpapers.xml
+rm openexo-wallpapers.xml
 
 echo '<?xml version="1.0"?>' >> openexo-wallpapers.xml
 echo '<!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">' >> openexo-wallpapers.xml
