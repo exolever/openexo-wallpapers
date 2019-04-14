@@ -1,34 +1,57 @@
 ---
 
-env:
-  global:
-  - PACKAGE_NAME=openexo-wallpapers
+sudo: required
+language: generic
 
-before_install:
-- export BUILD_VERSION=$(date "+%Y%m%d").$TRAVIS_BUILD_NUMBER
-- export PACKAGE_NAME_VERSION=$PACKAGE_NAME.$BUILD_VERSION.deb
+services:
+  - docker
 
 script:
-- bash generate.sh
-- dpkg-deb --build $PACKAGE_NAME
-- mv $PACKAGE_NAME.deb $PACKAGE_NAME_VERSION
+  - wget -O- http://travis.debian.net/script.sh | sh -
 
-after_success:
-- ls -l $PACKAGE_NAME_VERSION
-- md5sum $PACKAGE_NAME_VERSION
-- dpkg --contents $PACKAGE_NAME_VERSION
+# if:
+#   tag IS blank
 
-# after_script:
-# - |
-#   echo "Uploading package(s) to $FTP_URL ..."
-#   curl -u $FTP_USER:$FTP_PASSWORD --ftp-create-dirs -T $PACKAGE_NAME_VERSION ftp://$FTP_URL/repos/$PACKAGE_NAME_VERSION || DEPLOY_FAILURE=true ;
-#   if [[ $DEPLOY_FAILURE == 'true' ]]; then echo "Uploading package(s) failed!"; travis_terminate 1; fi;
+# env:
+#   global:
+#   - PACKAGE_NAME=openexo-wallpapers
+
+# before_install:
+# - export BUILD_VERSION=$(date "+%Y%m%d").$TRAVIS_BUILD_NUMBER
+# - export PACKAGE_NAME_VERSION=$PACKAGE_NAME.$BUILD_VERSION.deb
+
+# script:
+# - bash generate.sh
+# - if [ ! -z "$TRAVIS_TAG" ]; then sed -i "s/0.0.0/$TRAVIS_TAG/" DEBIAN/control; fi
+# - dpkg-deb --build $PACKAGE_NAME
+# - mv $PACKAGE_NAME.deb $PACKAGE_NAME_VERSION
+
+# after_success:
+# - ls -l $PACKAGE_NAME_VERSION
+# - md5sum $PACKAGE_NAME_VERSION
+# - dpkg --contents $PACKAGE_NAME_VERSION
+
+# # after_script:
+# # - |
+# #   echo "Uploading package(s) to $FTP_URL ..."
+# #   curl -u $FTP_USER:$FTP_PASSWORD --ftp-create-dirs -T $PACKAGE_NAME_VERSION ftp://$FTP_URL/repos/$PACKAGE_NAME_VERSION || DEPLOY_FAILURE=true ;
+# #   if [[ $DEPLOY_FAILURE == 'true' ]]; then echo "Uploading package(s) failed!"; travis_terminate 1; fi;
 
 
 
 
 # deploy:
 #   provider: launchpad
-#   slug: "LAUNCHPAD PROJECT SLUG"
+#   slug: "openexo"
 #   oauth_token: "YOUR OAUTH_TOKEN"
 #   oauth_token_secret: "YOUR OAUTH_TOKEN_SECRET"
+#   on:
+#     tags: true
+
+# deploy:
+#   provider: releases
+#   api_key: "GITHUB OAUTH TOKEN"
+#   file: "*.deb"
+#   skip_cleanup: true
+#   on:
+#     tags: true

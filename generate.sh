@@ -20,7 +20,7 @@ echo "<wallpapers>" >> openexo-wallpapers.xml
 
 echo '</wallpapers>' >> openexo-wallpapers.xml
 
-OLD_VERSION=$(head -1 debian/changelog | sed -e 's/.*(\(.*\)).*/\1/')
+OLD_VERSION=$(head -1 DEBIAN/changelog | sed -e 's/.*(\(.*\)).*/\1/')
 
 TAG=$(echo "${OLD_VERSION/[^.$\b]/}")
 TAG=$(echo "${TAG/[^.$\b]/}")
@@ -29,9 +29,9 @@ TAG=$(echo "${TAG/[^$\b]/}")
 TAG2="${OLD_VERSION:0:4}" # this catch the four first digit.
 NEW_VERSION=$TAG2"$((TAG + 1))"
 
-sed -i "1i \ " debian/changelog
-sed -i "1i   \ -- Matilde Cabrera <matilde.cabrera@openexo.com>  $(date +'%a, %d %b %Y  %H:%M:%S') +0100"  debian/changelog
-sed -i "1i \ " debian/changelog
-sed -i "1i   \  * Add a new imagen."  debian/changelog
-sed -i "1i \ " debian/changelog
-sed -i "1i wallpaperexo ($NEW_VERSION) bionic; urgency=low"  debian/changelog
+sed -i "1i \ " DEBIAN/changelog
+sed -i "1i   \ -- Matilde Cabrera <matilde.cabrera@openexo.com>  $(date +'%a, %d %b %Y  %H:%M:%S') +0100"  DEBIAN/changelog
+sed -i "1i \ " DEBIAN/changelog
+sed -i "1i   \  * Add a new imagen."  DEBIAN/changelog
+sed -i "1i \ " DEBIAN/changelog
+sed -i "1i wallpaperexo ($NEW_VERSION) bionic; urgency=low"  DEBIAN/changelog
