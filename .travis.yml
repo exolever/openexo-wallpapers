@@ -1,35 +1,24 @@
 ---
-
-sudo: required
 language: generic
 
-services:
-  - docker
+env:
+  global:
+  - PACKAGE_NAME=openexo-wallpapers
+
+before_install:
+- export BUILD_VERSION=$(date "+%Y%m%d").$TRAVIS_BUILD_NUMBER
+- export PACKAGE_NAME_VERSION=$PACKAGE_NAME.$BUILD_VERSION.deb
 
 script:
-  - wget -O- http://travis.debian.net/script.sh | sh -
+- if [ ! -z "$TRAVIS_TAG" ]; then sed -i "s/0.0.0/$TRAVIS_TAG/" DEBIAN/control; fi
+- bash generate.sh
+- dpkg-deb --build $PACKAGE_NAME
+- mv $PACKAGE_NAME.deb $PACKAGE_NAME_VERSION
 
-# if:
-#   tag IS blank
-
-# env:
-#   global:
-#   - PACKAGE_NAME=openexo-wallpapers
-
-# before_install:
-# - export BUILD_VERSION=$(date "+%Y%m%d").$TRAVIS_BUILD_NUMBER
-# - export PACKAGE_NAME_VERSION=$PACKAGE_NAME.$BUILD_VERSION.deb
-
-# script:
-# - bash generate.sh
-# - if [ ! -z "$TRAVIS_TAG" ]; then sed -i "s/0.0.0/$TRAVIS_TAG/" DEBIAN/control; fi
-# - dpkg-deb --build $PACKAGE_NAME
-# - mv $PACKAGE_NAME.deb $PACKAGE_NAME_VERSION
-
-# after_success:
-# - ls -l $PACKAGE_NAME_VERSION
-# - md5sum $PACKAGE_NAME_VERSION
-# - dpkg --contents $PACKAGE_NAME_VERSION
+after_success:
+- ls -l $PACKAGE_NAME_VERSION
+- md5sum $PACKAGE_NAME_VERSION
+- dpkg --contents $PACKAGE_NAME_VERSION
 
 # # after_script:
 # # - |
