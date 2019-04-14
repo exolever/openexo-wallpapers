@@ -10,10 +10,11 @@ before_install:
 - export PACKAGE_NAME_VERSION=$PACKAGE_NAME.$BUILD_VERSION.deb
 
 script:
+- ls -l .
 - if [ ! -z "$TRAVIS_TAG" ]; then sed -i "s/0.0.0/$TRAVIS_TAG/" DEBIAN/control; fi
 - bash generate.sh
-- dpkg-deb --build $PACKAGE_NAME
-- mv $PACKAGE_NAME.deb $PACKAGE_NAME_VERSION
+- dpkg-deb --build .
+- mv ..deb $PACKAGE_NAME_VERSION
 
 after_success:
 - ls -l $PACKAGE_NAME_VERSION
