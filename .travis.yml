@@ -16,7 +16,7 @@ script:
 - ls -l .
 - if [ ! -z "$TRAVIS_TAG" ]; then sed -i "s/0.0.0/$TRAVIS_TAG/" DEBIAN/control; fi
 - bash generate.sh
-- rm generate.sh
+- rm -rf generate.sh .travis.yml .git
 - dpkg-deb --build .
 - mv ..deb $PACKAGE_NAME_VERSION
 
