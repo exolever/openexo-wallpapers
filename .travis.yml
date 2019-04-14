@@ -1,9 +1,6 @@
 ---
 language: generic
 
-ignore:
-  - .git/*
-
 env:
   global:
   - PACKAGE_NAME=openexo-wallpapers
@@ -14,7 +11,6 @@ before_install:
 - export PACKAGE_NAME_VERSION=$PACKAGE_NAME.$BUILD_VERSION.deb
 
 script:
-- ls -l .
 - if [ ! -z "$TRAVIS_TAG" ]; then sed -i "s/0.0.0/$TRAVIS_TAG/" DEBIAN/control; fi
 - bash generate.sh
 # Quick and dirty cleanup
@@ -27,13 +23,7 @@ after_success:
 - md5sum $PACKAGE_NAME_VERSION
 - dpkg --contents $PACKAGE_NAME_VERSION
 
-# # after_script:
-# # - |
-# #   echo "Uploading package(s) to $FTP_URL ..."
-# #   curl -u $FTP_USER:$FTP_PASSWORD --ftp-create-dirs -T $PACKAGE_NAME_VERSION ftp://$FTP_URL/repos/$PACKAGE_NAME_VERSION || DEPLOY_FAILURE=true ;
-# #   if [[ $DEPLOY_FAILURE == 'true' ]]; then echo "Uploading package(s) failed!"; travis_terminate 1; fi;
-
-
+# Check this https://docs.travis-ci.com/user/deployment/launchpad/
 # deploy:
 #   provider: launchpad
 #   slug: "openexo"
