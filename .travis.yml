@@ -20,6 +20,8 @@ after_success:
 - ls -l $PACKAGE_NAME_VERSION
 - md5sum $PACKAGE_NAME_VERSION
 - dpkg --contents $PACKAGE_NAME_VERSION
+- git add openexo-wallpapers/openexo-wallpapers.xml
+- git commit -m "New upstream"
 
 # Check this https://docs.travis-ci.com/user/deployment/launchpad/
 deploy:
