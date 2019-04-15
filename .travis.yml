@@ -1,3 +1,41 @@
-lenguage: bash
+---
+language: generic
 
-script: bash generate.sh 
+env:
+  global:
+  - PACKAGE_NAME=openexo-wallpapers
+
+before_install:
+- export BUILD_VERSION=$(date "+%Y%m%d").$TRAVIS_BUILD_NUMBER
+- if [ ! -z "$TRAVIS_TAG" ]; then export BUILD_VERSION=$TRAVIS_TAG; fi
+- export PACKAGE_NAME_VERSION=$PACKAGE_NAME.$BUILD_VERSION.deb
+
+script:
+- if [ ! -z "$TRAVIS_TAG" ]; then sed -i "s/0.0.0/$TRAVIS_TAG/" DEBIAN/control; fi
+- bash generate.sh
+# Quick and dirty cleanup
+- rm -rf generate.sh .travis.yml README.md .git
+- dpkg-deb --build .
+- mv ..deb $PACKAGE_NAME_VERSION
+
+after_success:
+- ls -l $PACKAGE_NAME_VERSION
+- md5sum $PACKAGE_NAME_VERSION
+- dpkg --contents $PACKAGE_NAME_VERSION
+
+# Check this https://docs.travis-ci.com/user/deployment/launchpad/
+# deploy:
+#   provider: launchpad
+#   slug: "openexo"
+#   oauth_token: "YOUR OAUTH_TOKEN"
+#   oauth_token_secret: "YOUR OAUTH_TOKEN_SECRET"
+#   on:
+#     tags: true
+
+deploy:
+  provider: releases
+  api_key: "$GITHUB_TOKEN"
+  file: "$PACKAGE_NAME_VERSION"
+  skip_cleanup: true
+  on:
+    tags: true
