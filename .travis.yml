@@ -11,10 +11,8 @@ before_install:
 - export PACKAGE_NAME_VERSION=$PACKAGE_NAME.$BUILD_VERSION.deb
 
 script:
-- if [ ! -z "$TRAVIS_TAG" ]; then sed -i "s/0.0.0/$TRAVIS_TAG/" DEBIAN/control; fi
+- if [ ! -z "$TRAVIS_TAG" ]; then sed -i "s/0.0.0/$TRAVIS_TAG/" $PACKAGE_NAME/DEBIAN/control; fi
 - bash generate.sh
-- mkdir $PACKAGE_NAME
-- mv DEBIAN images openexo-wallpapers.xml -t $PACKAGE_NAME
 - dpkg-deb --build $PACKAGE_NAME
 - mv $PACKAGE_NAME.deb $PACKAGE_NAME_VERSION
 
