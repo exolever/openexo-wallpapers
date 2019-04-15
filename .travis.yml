@@ -40,4 +40,4 @@ deploy:
   file: "$PACKAGE_NAME_VERSION"
   skip_cleanup: true
   on:
-tags: true
+    tags: true
