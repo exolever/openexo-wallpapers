@@ -33,8 +33,6 @@ slug: "openexo"
     secure: w+1k6Q6n5z2EMhO9ctryZMrhCVYDssjZwr/Meao9GOZVxKBTMH6NHWPdHqfGTGNDi3PUVruCyOmHfvlUAytEqOYvNOMOP+lZ0P8bQ/biQ+qjpBrV0KBB4a7IfiiA86JbgE66JRigUsOOEzD4a+tjz3c3n9Bxu0dp2JMBSXNa+e15LCd7r8FlcHe8UoBznqOCuDxk4bwdGQaxxsKT6GbxaHwnf9tkXsstyxHQNbeuAim+HKav6AfbGvVQU4WUiK+tMTPUwUgdXUBsF560Rf1bXnTqMfpOfi1T/wqyZt9epp6vvqe6AyV1QF/8vZHWVGLqlOvjARRy6uAzbR2bTmxDyGeIWi9496YpoipRwOdEavzLIylndXJ07qA811BGavtI6mfvImXijU9HWvfSUrq1hRu+8a5RKUMbD22jk7r2K0zvZqePmNWKaaimcnFj4G/4xoz2q25ajHy98LjQQ7J+gLSjffLBvIO0ObztQgPu2ACrXx8icJVBRYjoXpCytZYbGE4cwVcjhYT8JEOxVzBNm7aNdgtQsEGsZiAJN5soNOdma0EtrIRGpJAgku7xv/ovjf/s5mhcPiF98tPS35HFgpHTU2GUsSLGgm6i6RB8N/7OWZPMlNfJQVwtdjfmrKVbApO6ZOugDf8xktJ6AWgSo/dN+GjUhpHNyTKBhjYdqi4=
   on:
     tags: true
-
-deploy:
   provider: releases
   api_key: "$GITHUB_TOKEN"
   file: "$PACKAGE_NAME_VERSION"
