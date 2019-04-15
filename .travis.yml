@@ -13,10 +13,10 @@ before_install:
 script:
 - if [ ! -z "$TRAVIS_TAG" ]; then sed -i "s/0.0.0/$TRAVIS_TAG/" DEBIAN/control; fi
 - bash generate.sh
-# Quick and dirty cleanup
-- rm -rf generate.sh .travis.yml README.md .git
-- dpkg-deb --build .
-- mv ..deb $PACKAGE_NAME_VERSION
+- mkdir $PACKAGE_NAME
+- mv DEBIAN images openexo-wallpapers.xml -t $PACKAGE_NAME
+- dpkg-deb --build $PACKAGE_NAME
+- mv $PACKAGE_NAME.deb $PACKAGE_NAME_VERSION
 
 after_success:
 - ls -l $PACKAGE_NAME_VERSION
