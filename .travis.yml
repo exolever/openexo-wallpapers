@@ -10,6 +10,7 @@ before_install:
 - if [ ! -z "$TRAVIS_TAG" ]; then export BUILD_VERSION=$TRAVIS_TAG; fi
 - export PACKAGE_NAME_VERSION=$PACKAGE_NAME.$BUILD_VERSION.deb
 - sudo apt-get install -y devscripts
+- sudo apt-get install -y fakeroot
 
 script:
 - if [ ! -z "$TRAVIS_TAG" ]; then sed -i "s/0.0.0/$TRAVIS_TAG/" $PACKAGE_NAME/DEBIAN/control; fi
