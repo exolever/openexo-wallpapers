@@ -6,7 +6,7 @@ echo '<?xml version="1.0"?>' >> openexo-wallpapers/openexo-wallpapers.xml
 echo '<!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">' >> openexo-wallpapers/openexo-wallpapers.xml
 echo "<wallpapers>" >> openexo-wallpapers/openexo-wallpapers.xml
 
-  for i in $(ls -C1 images)
+  for i in $(ls -C1 openexo-wallpapers/images | grep -e "png" -e "jpg" )
   do
  	echo " <wallpaper>" >> openexo-wallpapers/openexo-wallpapers.xml
     echo "    <name>OpenExO $i</name>" >> openexo-wallpapers/openexo-wallpapers.xml
