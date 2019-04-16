@@ -30,11 +30,7 @@ deploy:
     file: "$PACKAGE_NAME_VERSION"
     skip_cleanup: true
     on:
-      tags: true  
-  - provider: script
-    script: generate.sh
-    on:
-      branch: "$BUILD_VERSION"      
+      tags: true       
   - provider: launchpad
     slug: "~openexo/openexo/+git/openexo"
     oauth_token: "$LP_OAUTH_TOKEN"
