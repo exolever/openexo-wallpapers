@@ -16,8 +16,9 @@ script:
 - bash generate.sh
 - dpkg-deb --build $PACKAGE_NAME
 - mv $PACKAGE_NAME.deb $PACKAGE_NAME_VERSION
+- mv debian DEBIAN
 - debuild -S -so -k$GPG_KEY
-- dput ppa:openexo/openexo-wallpapers "$PACKAGE_NAME_VERSION"_source.changes
+- dput ppa:openexo/openexo-wallpapers "$PACKAGE_NAME.$BUILD_VERSION"_source.changes
 
 after_success:
 - ls -l $PACKAGE_NAME_VERSION
