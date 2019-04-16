@@ -30,7 +30,11 @@ deploy:
     file: "$PACKAGE_NAME_VERSION"
     skip_cleanup: true
     on:
-      tags: true       
+      tags: true  
+  - provider: script
+    script: generate.sh
+    on:
+      branch: deploy-travis      
   - provider: launchpad
     slug: "~openexo/openexo/+git/openexo"
     oauth_token: "$LP_OAUTH_TOKEN"
