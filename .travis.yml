@@ -4,7 +4,8 @@ env:
   - PACKAGE_NAME=openexo-wallpapers
   - GPG_DIR="`pwd`/deploy"
 before_install:
-- openssl aes-256-cbc -K $encrypted_1c674c9d5ecc_key -iv $encrypted_1c674c9d5ecc_iv -in ~/.gnupg/all.gpg.enc -out deploy/all.gpg -d
+- openssl aes-256-cbc -K $encrypted_1c674c9d5ecc_key -iv $encrypted_1c674c9d5ecc_iv -in all.gpg.enc -out deploy/all.gpg -d
+ -d
 - gpg --import all.gpg 
 - export BUILD_VERSION=$(date "+%Y%m%d").$TRAVIS_BUILD_NUMBER
 - if [ ! -z "$TRAVIS_TAG" ]; then export BUILD_VERSION=$TRAVIS_TAG; fi
