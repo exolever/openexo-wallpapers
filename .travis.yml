@@ -21,7 +21,7 @@ script:
 - mv $PACKAGE_NAME/DEBIAN $PACKAGE_NAME/debian
 - mv $PACKAGE_NAME $PACKAGE_NAME.0.0.1
 - cd $PACKAGE_NAME.0.0.1 && debuild -S 
-- dput ppa:openexo/openexo-wallpapers "$PACKAGE_NAME_$BUILD_VERSION"_source.changes
+- dput ppa:openexo/openexo-wallpapers "$PACKAGE_NAME"_"$BUILD_VERSION"_source.changes
 
 after_success:
 - ls -l $PACKAGE_NAME_VERSION
