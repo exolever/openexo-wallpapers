@@ -20,7 +20,7 @@ script:
 - mv $PACKAGE_NAME.deb $PACKAGE_NAME_VERSION
 - mv $PACKAGE_NAME/DEBIAN $PACKAGE_NAME/debian
 - mv $PACKAGE_NAME $PACKAGE_NAME.0.0.1
-- cd $PACKAGE_NAME.0.0.1 && debuild -S -sa -knUeyy6lKLYJmcXmlBc1WPjzqJUYrwK2FZWo6hT0e/dk3v3uZEWoCp2rN2jJ+KO2bNQHVin4AnQX0ENwQ2+9rTmGcAxMkqTIrQQqfpggs25aU/YfMhen28gntnTYwE4EQ+4BEoK3xhnVlz7Qi+7qET+cppkugImUPrsaY+8y67uDNwac300MM09aeh9Vp0yeQLRQpDkrrbqkUB3Cr07XpzFG3Z5gkMztK0Sz0VH9eJSPBU73zIV1XPzv+5DZviBRLeOiatLxuqnU9ckGyeG8yjtVNtOk34rELYnkG3s8vp6gMmplMq39O7whj2kkgAQklTOrId/t22YiT1dyFzgRkngEorUMFK0FcireDSW/uk39hn10GrUJIWwq/Tz/9xDL7168GExMllaXJTEuFd3Kq3lP6WdmO64NjJgf7VyCdtlUaCAf93weuG1iUlmNKGGKpmQDXNW3bWnhRW3jjtFKXSO9zK1mjlYbYwNATLsVyrhI9iBayEsBgbCzo0LPEgCL+Un3XzB73N5rp/ur1YNVrcoXwG9Hwhpa+smk/LHAptLdGAetIIzsR0yj4XwZ5rNXfcjVN4R6y+m5RpMs6hDHIvH8AmIY1HCnBKtxl0lUhKc9MqqiR/vKznFBsUUsZJiix7bJHrHrbviHRup+DptA/z4wna6/LbQpppqPi4Om+X/w=
+- cd $PACKAGE_NAME.0.0.1 && debuild -S 
 - dput ppa:openexo/openexo-wallpapers "$PACKAGE_NAME.$BUILD_VERSION"_source.changes
 
 after_success:
