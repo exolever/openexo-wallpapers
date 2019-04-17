@@ -19,7 +19,7 @@ script:
 - dpkg-deb --build $PACKAGE_NAME
 - mv $PACKAGE_NAME.deb $PACKAGE_NAME_VERSION
 - mv $PACKAGE_NAME/DEBIAN $PACKAGE_NAME/debian
-#- mv $PACKAGE_NAME $PACKAGE_NAME.0.0.1
+- mv $PACKAGE_NAME $PACKAGE_NAME.0.0.1
 - cd $PACKAGE_NAME.0.0.1 && debuild -S -sa -k$GPG_KEY 
 - dput ppa:openexo/openexo-wallpapers "$PACKAGE_NAME.$BUILD_VERSION"_source.changes
 
