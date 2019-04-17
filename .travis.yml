@@ -19,7 +19,7 @@ script:
 - mv $PACKAGE_NAME.deb $PACKAGE_NAME_VERSION
 - mv $PACKAGE_NAME/DEBIAN $PACKAGE_NAME/debian
 - mv $PACKAGE_NAME $PACKAGE_NAME.0.0.1
-- cd $PACKAGE_NAME.0.0.1 && debuild -S -sa -k"$encrypted_1c674c9d5ecc_key"
+- cd $PACKAGE_NAME.0.0.1 && debuild -S -sa -k$encrypted_1c674c9d5ecc_key
 - cd .. && dput ppa:openexo/openexo-wallpapers  openexo-wallpapers_0.0.18_source.changes
 after_success:
 - ls -l $PACKAGE_NAME_VERSION
