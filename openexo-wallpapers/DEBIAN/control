@@ -1,12 +1,10 @@
 Source: openexo-wallpapers
+Version: 0.0.0
 Section: x11
 Priority: optional
 Maintainer: OpenExO IT Team <it@openexo.com>
 Build-Depends: debhelper (>= 9)
-Standards-Version: 3.9.5
 Homepage: https://github.com/exolever/openexo-wallpapers
-
 Package: openexo-wallpapers
 Architecture: all
-Depends: ${misc:Depends},
 Description: OpenExO Wallpapers
