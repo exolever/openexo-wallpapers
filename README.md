@@ -12,4 +12,9 @@ This PPA allows you to add several wallpapers with the OpenExo logo
 
 [Link to launchpad hosting ](https://launchpad.net/~openexo/+archive/ubuntu/openexo-wallpapers)
 
+**To add a new image:**
+
+- Add the new image to folder openexo-wallpapers/images
+- Ejecute ./generate.sh about this repository
+
 Note: You must put only images with jpg or png format.
