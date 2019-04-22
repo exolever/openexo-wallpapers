@@ -8,5 +8,5 @@ Homepage: https://github.com/exolever/openexo-wallpapers
 
 Package: openexo-wallpapers
 Architecture: all
-Depends: ${misc:Depends}, 
+Depends: ${misc:Depends},
 Description: OpenExO Wallpapers
