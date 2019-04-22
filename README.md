@@ -14,7 +14,7 @@ This PPA allows you to add several wallpapers with the OpenExo logo
 
 **To add a new image:**
 
-- Add the new image to folder openexo-wallpapers/images
-- Ejecute ./generate.sh about this repository
+- Add the new image to folder images.
+- Ejecute ./generate.sh about this repository.
 
 Note: You must put only images with jpg format.
