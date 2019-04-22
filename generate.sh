@@ -1,5 +1,7 @@
 #!/bin/bash
 
+rm openexo-wallpapers/openexo-wallpapers.xml
+
 echo "Generating openexo-wallpapers/openexo-wallpapers.xml..."
 
 echo '<?xml version="1.0"?>' >> openexo-wallpapers/openexo-wallpapers.xml
@@ -34,4 +36,4 @@ sed -i "1i   \ -- Matilde Cabrera <matilde.cabrera@openexo.com>  $(date +'%a, %d
 sed -i "1i \ " openexo-wallpapers/DEBIAN/changelog
 sed -i "1i   \  * Add a new imagen."  openexo-wallpapers/DEBIAN/changelog
 sed -i "1i \ " openexo-wallpapers/DEBIAN/changelog
-sed -i "1i wallpaperexo ($NEW_VERSION) bionic; urgency=low"  openexo-wallpapers/DEBIAN/changelog
+sed -i "1i openexo-wallpapers ($NEW_VERSION) bionic; urgency=low"  openexo-wallpapers/DEBIAN/changelog
