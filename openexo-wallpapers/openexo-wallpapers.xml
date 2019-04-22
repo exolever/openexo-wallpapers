@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
+<wallpapers>
+ <wallpaper>
+    <name>OpenExO wallpaper-exo-1.jpg</name>
+    <filename>/usr/share/backgrounds/wallpaper-exo-1.jpg </filename>
+    <options>zoom</options>
+    <pcolor>#000000</pcolor>
+    <scolor>#000000</scolor>
+    <shade_type>solid</shade_type>
+ </wallpaper>
+ <wallpaper>
+    <name>OpenExO wallpaper-exo-2.jpg</name>
+    <filename>/usr/share/backgrounds/wallpaper-exo-2.jpg </filename>
+    <options>zoom</options>
+    <pcolor>#000000</pcolor>
+    <scolor>#000000</scolor>
+    <shade_type>solid</shade_type>
+ </wallpaper>
+ <wallpaper>
+    <name>OpenExO wallpaper-exo-3.jpg</name>
+    <filename>/usr/share/backgrounds/wallpaper-exo-3.jpg </filename>
+    <options>zoom</options>
+    <pcolor>#000000</pcolor>
+    <scolor>#000000</scolor>
+    <shade_type>solid</shade_type>
+ </wallpaper>
+</wallpapers>
