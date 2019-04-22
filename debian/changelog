@@ -1,0 +1,84 @@
+openexo-wallpapers (0.0.17) bionic; urgency=low
+ 
+  * Add a new imagen.
+ 
+ -- Matilde Cabrera <matilde.cabrera@openexo.com>  mar, 02 abr 2019  11:00:51 +0100
+ 
+openexo-wallpapers (0.0.16) bionic; urgency=low
+ 
+  * Testing.
+ 
+ -- Matilde Cabrera <matilde.cabrera@openexo.com>  mar, 02 abr 2019  10:51:21 +0100
+ 
+openexo-wallpapers (0.0.15) bionic; urgency=low
+ 
+  * Add postinst.
+ 
+ -- Matilde Cabrera <matilde.cabrera@openexo.com>  mar, 02 abr 2019  09:53:49 +0100
+ 
+openexo-wallpapers (0.0.14) bionic; urgency=low
+ 
+  * Add link.
+ 
+ -- Matilde Cabrera <matilde.cabrera@openexo.com>  mar, 02 abr 2019  09:24:40 +0100
+ 
+openexo-wallpapers (0.0.13) bionic; urgency=low
+ 
+  * Add link.
+ 
+ -- Matilde Cabrera <matilde.cabrera@openexo.com>  mar, 02 abr 2019  09:01:45 +0100
+ 
+openexo-wallpapers (0.0.12) bionic; urgency=low
+ 
+  * Add a new imagen.
+ 
+ -- Matilde Cabrera <matilde.cabrera@openexo.com>  mar, 02 abr 2019  08:41:56 +0100
+ 
+openexo-wallpapers (0.0.11) bionic; urgency=low
+ 
+  * Add a new imagen.
+ 
+ -- Matilde Cabrera <matilde.cabrera@openexo.com>  lun, 01 abr 2019  11:30:42 +0100
+ 
+openexo-wallpapers (0.0.10) bionic; urgency=low
+ 
+  * Add a new imagen.
+ 
+ -- Matilde Cabrera <matilde.cabrera@openexo.com>  vie, 29 mar 2019  10:03:32 +0100
+ 
+openexo-wallpapers (0.0.9) trusty; urgency=low
+ 
+  * Add a new imagen
+ 
+ -- Matilde Cabrera <matilde.cabrera@openexo.com>  mié, 27 mar 2019  11:16:57 +0100
+ 
+openexo-wallpapers (0.0.8) bionic; urgency=low
+
+  * New distributions test.
+
+ -- Matilde Cabrera <matilde.cabrera@openexo.com>  Tue, 26 Mar 2019 10:14:00 +0100
+
+openexo-wallpapers (0.0.7) bionic; urgency=low
+
+  * New distributions test.
+
+ -- Matilde Cabrera <matilde.cabrera@openexo.com>  Tue, 26 Mar 2019 09:14:00 +0100
+
+openexo-wallpapers (0.0.6) bionic; urgency=low
+
+  * New distributions test.
+
+ -- Matilde Cabrera <matilde.cabrera@openexo.com>  Mon, 25 Mar 2019 09:15:06 +0100
+ 
+openexo-wallpapers (0.0.5) bionic; urgency=low
+
+  * New distributions.
+
+ -- Matilde Cabrera <matilde.cabrera@openexo.com>  Mon, 25 Mar 2019 09:15:06 +0100
+
+openexo-wallpapers (0.0.4) bionic; urgency=low
+
+  * First version
+
+ -- Matilde Cabrera <matilde.cabrera@openexo.com>  Fri, 22 Mar 2019 09:56:25 +0100
+
