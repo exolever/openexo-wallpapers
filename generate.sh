@@ -1,5 +1,7 @@
 #!/bin/bash
 
+rm openexo-wallpapers/openexo-wallpapers.xml
+
 echo "Generating openexo-wallpapers/openexo-wallpapers.xml..."
 
 echo '<?xml version="1.0"?>' >> openexo-wallpapers/openexo-wallpapers.xml
